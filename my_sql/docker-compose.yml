@@ -1,0 +1,19 @@
+services:
+  mysql-dev-db:
+    container_name: mysql-dev-db
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: 'dev-db'
+      MYSQL_USER: 'webadmin'
+      MYSQL_PASSWORD: 'webadmin'
+      MYSQL_ROOT_PASSWORD: 'sysadm'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - mysql-dev-db:/var/lib/mysql
+
+volumes:
+  mysql-dev-db:
