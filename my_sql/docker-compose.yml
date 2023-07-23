@@ -13,7 +13,7 @@ services:
     expose:
       - '3306'
     volumes:
-      - mysql-dev-db:/var/lib/mysql
+      - mysql-dev-db:/var/lib/dev-db
 
 volumes:
   mysql-dev-db:
